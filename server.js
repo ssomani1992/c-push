@@ -31,7 +31,7 @@ app.post('/', function (request, response) {
       //   fs.readFile("endpoint.txt", function (err, buffer) {
       //     var string = buffer.toString();
       //     var array = string.split('\n');
-      //     for(i = 0; i < (array.length-1); i++) {
+      //     for(i = 0; i < (array.length); i++) {
       //       var subscriber = array[i].split(',');
       //       console.log(subscriber[1]);
       //       console.log(obj.name);
@@ -50,7 +50,7 @@ app.post('/', function (request, response) {
         fs.readFile("endpoint.txt", function (err, buffer) {
           var string = buffer.toString();
           var array = string.split('\n');
-          for(i = 0; i < (array.length-1); i++) {
+          for(i = 0; i < (array.length); i++) {
             var subscriber = array[i].split(',');
             webPush.sendNotification(subscriber[2], 200, obj.key, JSON.stringify({
               action: 'chatMsg',
@@ -63,7 +63,7 @@ app.post('/', function (request, response) {
         fs.readFile("endpoint.txt", function (err, buffer) {
           var string = buffer.toString();
           var array = string.split('\n');
-          for(i = 0; i < (array.length-1); i++) {
+          for(i = 0; i < (array.length); i++) {
             var subscriber = array[i].split(',');
             webPush.sendNotification(subscriber[2], 200, obj.key, JSON.stringify({
               action: 'init',
@@ -78,7 +78,7 @@ app.post('/', function (request, response) {
           fs.readFile("endpoint.txt", function (err, buffer) {
             var string = buffer.toString();
             var array = string.split('\n');
-            for(i = 0; i < (array.length-1); i++) {
+            for(i = 0; i < (array.length); i++) {
               var subscriber = array[i].split(',');
               webPush.sendNotification(subscriber[2], 200, obj.key, JSON.stringify({
                 action: 'subscribe',
@@ -92,7 +92,7 @@ app.post('/', function (request, response) {
             var newString = '';
             var string = buffer.toString();
             var array = string.split('\n');
-            for(i = 0; i < (array.length-1); i++) {
+            for(i = 0; i < (array.length); i++) {
               var subscriber = array[i].split(',');
               console.log('Unsubscribe: ' + subscriber[1]);
 

@@ -38,7 +38,6 @@ window.addEventListener('load', function() {
       } else if(reg.active) {
         console.log('Service worker active');
       }
-
       initialiseState(reg);
     });  
   } else {  
