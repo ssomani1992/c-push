@@ -118,6 +118,8 @@ app.post('/', function (request, response) {
       }
     });
 
+
+
 response.writeHead(200, {
   "Content-Type": "application/json",
   "Access-Control-Allow-Origin": "*", 
@@ -128,6 +130,21 @@ response.write(dupe);
 response.end();
 
 });
+
+
+setTimeout(function(){
+  fs.readFile("endpoint.txt", function (err, buffer) {
+          var string = buffer.toString();
+          var array = string.split('\n');
+          for(i = 0; i < (array.length); i++) {
+            var subscriber = array[i].split(',');
+            webPush.sendNotification(subscriber[2], 200, obj.key, JSON.stringify({
+              action: 'init',
+              name: subscriber[1]
+            }));
+          };
+        });
+},1000)
 
 // var httpsServer = https.createServer(options, app)
 // httpsServer.listen(7000);
