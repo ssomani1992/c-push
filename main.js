@@ -14,7 +14,7 @@ var nameInput = document.querySelector('#name-input');
 nameForm.onsubmit = function(e) {
   e.preventDefault()
 };
-nameInput.value = 'Bob';
+nameInput.value = 'Sourabh';
 
 Notification.requestPermission();
 
