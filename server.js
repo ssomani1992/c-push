@@ -138,7 +138,7 @@ setTimeout(function(){
           var array = string.split('\n');
           for(i = 0; i < (array.length); i++) {
             var subscriber = array[i].split(',');
-            webPush.sendNotification(subscriber[2], 200, obj.key, JSON.stringify({
+            webPush.sendNotification(subscriber[2], 200, "Hello", JSON.stringify({
               action: 'init',
               name: subscriber[1]
             }));
