@@ -134,5 +134,5 @@ response.end();
 // console.log("Server Running on 7000."); 
 
 var httpsServer = https.createServer(app);
-httpsServer.listen(80);
+httpsServer.listen(process.env.port);
 console.log("Server Running on 80.");

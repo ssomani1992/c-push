@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chrisdavidmills/push-api-demo.git"
+    "url": "git+https://github.com/chrisdavidmills/push-api-demo.git"
   },
   "keywords": [
     "web push",
@@ -17,7 +17,7 @@
     "demo"
   ],
   "author": "Chris David Mills",
-  "license": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/chrisdavidmills/push-api-demo/issues"
   },
@@ -26,5 +26,6 @@
     "express": "^4.13.4",
     "serve-static": "^1.10.2",
     "web-push": "^1.0.2"
-  }
+  },
+  "devDependencies": {}
 }
